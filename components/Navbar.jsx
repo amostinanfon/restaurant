@@ -10,12 +10,12 @@ const Navbar = () => {
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>COMMANDEZ !!!</div>
-          <div className={styles.text}>694 291 173</div>
+          <div className={styles.text}>654 046 638</div>
         </div>
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Homepage</li>
+          <li className={styles.listItem}>Accueil</li>
           <li className={styles.listItem}>Produits</li>
           <li className={styles.listItem}>Menu</li>
           {/* <Image src="/img/logo.png" alt="logo" width={160} height={69} /> */}
