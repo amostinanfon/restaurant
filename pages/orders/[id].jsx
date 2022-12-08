@@ -9,6 +9,7 @@ const Order = () => {
     if (index - status === 1) return styles.inProgress;
     if (index - status > 1) return styles.undone;
   };
+  
   return (
     <div className={styles.container}>
       <div className={styles.left}>
