@@ -96,7 +96,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
   .container {
     height: auto;
     text-align: center;
