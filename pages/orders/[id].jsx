@@ -4,7 +4,7 @@ import Image from "next/legacy/image";
 const Order = () => {
   const status = 0;
 
-  const statusClass = (index) => {
+  const statusClass = (index) => {  
     if (index - status < 1) return styles.done;
     if (index - status === 1) return styles.inProgress;
     if (index - status > 1) return styles.undone;

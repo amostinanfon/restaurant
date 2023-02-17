@@ -85,6 +85,8 @@
     display: none;
   }
 
+  
+
   .item:nth-child(1) {
     flex: 3;
   }
