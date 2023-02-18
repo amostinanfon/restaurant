@@ -16,9 +16,9 @@ const Order = () => {
         <div className={styles.row}>
           <table className={styles.table}>
             <tr className={styles.trTitle}>
-              <th>Order ID</th>
-              <th>Customer</th>
-              <th>Address</th>
+              <th>No Commande</th>
+              <th>Client</th>
+              <th>Adresse</th>
               <th>Total</th>
             </tr>
             <tr className={styles.tr}>
@@ -26,13 +26,13 @@ const Order = () => {
                 <span className={styles.id}>129837819237</span>
               </td>
               <td>
-                <span className={styles.name}>John Doe</span>
+                <span className={styles.name}>Amos TINA</span>
               </td>
               <td>
-                <span className={styles.address}>Elton st. 212-33 LA</span>
+                <span className={styles.address}>Nyalla Pariso</span>
               </td>
               <td>
-                <span className={styles.total}>$79.80</span>
+                <span className={styles.total}> FCFA 79.80</span>
               </td>
             </tr>
           </table>
@@ -40,7 +40,7 @@ const Order = () => {
         <div className={styles.row}>
           <div className={statusClass(0)}>
             <Image src="/img/paid.png" width={30} height={30} alt="" />
-            <span>Payment</span>
+            <span>Paiement</span>
             <div className={styles.checkedIcon}>
               <Image
                 className={styles.checkedIcon}
@@ -53,7 +53,7 @@ const Order = () => {
           </div>
           <div className={statusClass(1)}>
             <Image src="/img/bake.png" width={30} height={30} alt="" />
-            <span>Preparing</span>
+            <span>En cours</span>
             <div className={styles.checkedIcon}>
               <Image
                 className={styles.checkedIcon}
@@ -66,7 +66,7 @@ const Order = () => {
           </div>
           <div className={statusClass(2)}>
             <Image src="/img/bike.png" width={30} height={30} alt="" />
-            <span>On the way</span>
+            <span>En chemin</span>
             <div className={styles.checkedIcon}>
               <Image
                 className={styles.checkedIcon}
@@ -79,7 +79,7 @@ const Order = () => {
           </div>
           <div className={statusClass(3)}>
             <Image src="/img/delivered.png" width={30} height={30} alt="" />
-            <span>Delivered</span>
+            <span>Livré</span>
             <div className={styles.checkedIcon}>
               <Image
                 className={styles.checkedIcon}
@@ -94,18 +94,18 @@ const Order = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.wrapper}>
-          <h2 className={styles.title}>CART TOTAL</h2>
+          <h2 className={styles.title}>CARTE TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>$79.60
+            <b className={styles.totalTextTitle}>SOUS TOTAL:</b>79.60 FCFA
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Discount:</b>$0.00
+            <b className={styles.totalTextTitle}>REDUCTION:</b>0.00 FCFA
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>$79.60
+            <b className={styles.totalTextTitle}>Total:</b>79.60 FCFA
           </div>
           <button disabled className={styles.button}>
-            PAID
+            PAYER
           </button>
         </div>
       </div>
