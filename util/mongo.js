@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 
-const MONGODB_URL = process.env.MONGODB_URL
+const MONGO_URL = process.env.MONGO_URL
 
 if (!MONGO_URL) {
     throw new error(
@@ -26,7 +26,7 @@ if(!cached.promise) {
         bufferCommands: false,
     }
 
-    cached.promise = mongoose.connect(MONGODB_URL, opts).then((mongoose) =>{
+    cached.promise = mongoose.connect(MONGO_URL, opts).then((mongoose) =>{
         return mongoose
     })
 }
