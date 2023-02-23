@@ -3,6 +3,9 @@ import PizzaCard from './PizzaCard'
 
 
 const PizzaList = ({pizzaList}) => {
+
+  //console.log(pizzaList);
+  
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>LA MEILLEURE PIZZA DE LA VILLE</h1>
@@ -13,10 +16,9 @@ const PizzaList = ({pizzaList}) => {
       </p>
       <div className={styles.wrapper}>
           {
-            pizzaList?.map((pizza) => {
-              console.log(pizza);
-              <PizzaCard key={pizza._id} pizza={pizza}/>
-            })
+             pizzaList.map((pizza) => (
+              <PizzaCard key={pizza._id} pizza={pizza} />
+             ))
           }
       </div>
     </div>
