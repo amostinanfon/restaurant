@@ -5,8 +5,8 @@ import styles from "../styles/Navbar.module.css";
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
-        <div className={styles.callButton}>
+      <div className={styles.item} data-testid='one'>
+        <div className={styles.callButton} >
           <Image src="/img/telephone.png" alt="telephone" width={32} height={32}/>
         </div>
         <div className={styles.texts}>
@@ -14,7 +14,7 @@ const Navbar = () => {
           <div className={styles.text}>654 046 638</div>
         </div>
       </div>
-      <div className={styles.item}>
+      <div className={styles.item} data-testid='two'>
         <ul className={styles.list}>
           <li className={styles.listItem}>Accueil</li>
           <li className={styles.listItem}>Produits</li>
@@ -26,7 +26,7 @@ const Navbar = () => {
           <li className={styles.listItem}>Contact</li>
         </ul>
       </div>
-      <div className={styles.item}>
+      <div className={styles.item} data-testid='three'>
         <div className={styles.cart}>
           <Image src="/img/cart.png" alt="cart" width={30} height={30} />
           <div className={styles.counter}>2</div>
