@@ -1,16 +1,12 @@
 import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import axios from 'axios';
 
-const Product = () => {
+
+const Product = ({pizza}) => {
   const [size, setSize] = useState(0);
-  const pizza = {
-    id: 1,
-    img: "/img/pizza.png",
-    name: "YABASSI",
-    price: [19.9, 23.9, 27.9],
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu purus, rhoncus fringilla vestibulum vel, dignissim vel ante. Nulla facilisi. Nullam a urna sit amet tellus pellentesque egestas in in ante.",
-  };
+
 
   return (
     <div className={styles.container}>
@@ -20,8 +16,8 @@ const Product = () => {
         </div>
       </div>
       <div className={styles.right}>
-        <h1 className={styles.title}>{pizza.name}</h1>
-        <span className={styles.price}>FCFA {pizza.price[size]}</span>
+        <h1 className={styles.title}>{pizza.title}</h1>
+        <span className={styles.price}>FCFA {pizza.prices[size]}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>CHOISIR LA TAILLE</h3>
         <div className={styles.sizes}>
@@ -40,42 +36,17 @@ const Product = () => {
         </div>
         <h3 className={styles.choose}>CHOIX INGREDIENTS ADDITIONNELS</h3>
         <div className={styles.ingredients}>
-          <div className={styles.option}>
-            <input
-              type="checkbox"
-              id="double"
-              name="double"
-              className={styles.checkbox}
-            />
-            <label htmlFor="double">DOUBLE INGREDIENTS</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="cheese"
-              name="cheese"
-            />
-            <label htmlFor="cheese">EXTRA SERVICE</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="spicy"
-              name="spicy"
-            />
-            <label htmlFor="spicy">Sauce TOMATE</label>
-          </div>
-          <div className={styles.option}>
-            <input
-              className={styles.checkbox}
-              type="checkbox"
-              id="garlic"
-              name="garlic"
-            />
-            <label htmlFor="garlic">Sauce GARLIC</label>
-          </div>
+          {pizza.extraOptions.map((option) =>(
+            <div className={styles.option} key={option._id}>
+              <input
+                type="checkbox"
+                id="double"
+                name="double"
+                className={styles.checkbox}
+              />
+              <label htmlFor="double">{option.text}</label>
+            </div>
+          ))}
         </div>
         <div className={styles.add}>
             <input type="number" defaultValue={1} className={styles.quantity}/>
@@ -85,5 +56,19 @@ const Product = () => {
     </div>
   );
 };
+
+export const getServerSideProps = async ({params}) => {
+  // Fetch data from external API
+  const res = await axios.get(`http://192.168.31.135:3000/api/products/${params.id}`);
+
+  // Pass data to the page via props
+  return { 
+    props: 
+      { 
+        pizza: res.data
+      } 
+  }
+}
+
 
 export default Product;

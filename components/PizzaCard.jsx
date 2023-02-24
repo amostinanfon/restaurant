@@ -1,6 +1,6 @@
 import Image from "next/legacy/image";
 import styles from "../styles/PizzaCard.module.css";
-
+import Link from "next/link"
 
 const PizzaCard = ({pizza}) => {
 
@@ -8,13 +8,13 @@ const PizzaCard = ({pizza}) => {
 
   return (
     <div className={styles.container}>
-      <Image src={pizza.img} alt="" height={400} width={400}/>
-      <h1 className={styles.title}>NDOGMATCHANG</h1>
-      <span className={styles.price}>1.000 FCFA</span>
+      <Link href={`/product/${pizza._id}`}>
+        <Image src={pizza.img} alt="" height={400} width={400}/>
+      </Link>
+      <h1 className={styles.title}>{pizza.title}</h1>
+      <span className={styles.price}>{pizza.prices[0]}</span>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt minus 
-        quidem temporibus aspernatur, natus corrupti sit iure a,
-         neque ullam provident dolores expedita magni nostrum? Autem ipsa totam iusto vel.
+        {pizza.desc}
       </p>
     </div>
   );
