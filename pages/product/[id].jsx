@@ -4,8 +4,36 @@ import { useState } from "react";
 import axios from 'axios';
 
 
+
 const Product = ({pizza}) => {
+  const [price, setPrice] = useState(pizza.prices[0]);
   const [size, setSize] = useState(0);
+  const [extras, setExtras] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+
+
+  const changePrice = (number) =>{
+    setPrice(price + number);
+  }
+
+  const handleSize = (sizeIndex) => {
+    const difference = pizza.prices[sizeIndex] - pizza.prices[size];
+    setSize(sizeIndex);
+    changePrice(difference);
+  }
+
+  const handleChange = (e, option) => {
+    const checked = e.target.checked;
+
+    if (checked) {
+      changePrice(option.price);
+      setExtras((prev) => [...prev, option]);
+    }else{
+      changePrice(-option.price);
+      setExtras(extras.filter((extra) => extra._id !== option._id));
+
+    }
+  }
 
 
   return (
@@ -17,19 +45,19 @@ const Product = ({pizza}) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.title}</h1>
-        <span className={styles.price}>FCFA {pizza.prices[size]}</span>
+        <span className={styles.price}>FCFA {price}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>CHOISIR LA TAILLE</h3>
         <div className={styles.sizes}>
-          <div className={styles.size} onClick={() => setSize(0)}>
+          <div className={styles.size} onClick={() => handleSize(0)}>
             <Image src="/img/size.png" layout="fill" alt="" />
             <span className={styles.number}>PETITE</span>
           </div>
-          <div className={styles.size} onClick={() => setSize(1)}>
+          <div className={styles.size} onClick={() => handleSize(1)}>
             <Image src="/img/size.png" layout="fill" alt="" />
             <span className={styles.number}>MOYEN</span>
           </div>
-          <div className={styles.size} onClick={() => setSize(2)}>
+          <div className={styles.size} onClick={() => handleSize(2)}>
             <Image src="/img/size.png" layout="fill" alt="" />
             <span className={styles.number}>Large</span>
           </div>
@@ -38,18 +66,24 @@ const Product = ({pizza}) => {
         <div className={styles.ingredients}>
           {pizza.extraOptions.map((option) =>(
             <div className={styles.option} key={option._id}>
-              <input
+              <input    
                 type="checkbox"
-                id="double"
-                name="double"
+                id={option.text}
+                name={option.text}
                 className={styles.checkbox}
+                onClick={(e)=> handleChange(e,option)}
               />
               <label htmlFor="double">{option.text}</label>
             </div>
           ))}
         </div>
         <div className={styles.add}>
-            <input type="number" defaultValue={1} className={styles.quantity}/>
+            <input 
+              onChange={(e)=>setQuantity(e.target.value)} 
+              type="number" 
+              defaultValue={1} 
+              className={styles.quantity}
+            />
             <button className={styles.button}>AJOUTER A LA CARTE</button>
         </div>
       </div>
@@ -59,11 +93,11 @@ const Product = ({pizza}) => {
 
 export const getServerSideProps = async ({params}) => {
   // Fetch data from external API
-  const res = await axios.get(`http://192.168.31.135:3000/api/products/${params.id}`);
+  const res = await axios.get(`http://localhost:3000/api/products/${params.id}`);
 
   // Pass data to the page via props
   return { 
-    props: 
+    props:
       { 
         pizza: res.data
       } 
