@@ -4,7 +4,7 @@ import Link from "next/link"
 
 const PizzaCard = ({pizza}) => {
 
-  console.log(pizza);
+  //console.log(pizza);
 
   return (
     <div className={styles.container}>
