@@ -9,7 +9,6 @@ import PizzaList from '../components/PizzaList';
 
 export default function Home({pizzaList}) {
 
-
   return (
     <div className={styles.container}>
       <Head>
@@ -25,8 +24,9 @@ export default function Home({pizzaList}) {
 
 
 export const getServerSideProps = async () => {
-  // Fetch data from external API
-  const res = await axios.get("http://localhost:3000/api/products");
+
+    // Fetch data from external API
+  const res = await axios.get("http://192.168.31.135:3000/api/products"); 
 
   // Pass data to the page via props
   return { 
@@ -35,6 +35,7 @@ export const getServerSideProps = async () => {
         pizzaList: res.data
       } 
   }
+
 }
 
 

@@ -13,6 +13,10 @@
   margin-bottom: 50px;
 }
 
+.thead {
+  font-size: small;
+}
+
 .row:last-child {
   width: 80%;
   display: flex;

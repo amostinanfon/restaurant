@@ -7,47 +7,49 @@ const Cart = () => {
     <div className={styles.container}>
         <div className={styles.left}>
             <table className={styles.table}>
-                <tr className={styles.tr}>
-                  {/*
+                <thead>
+                  <tr className={styles.tr}>
                     <th>Product</th>
                     <th>Name</th>
                     <th>Extras</th>
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Total</th> 
-                    */}
-                </tr>
-                {/* <tr>
-                  <td>
-                    <div className={styles.imgContainer}>
-                      <Image 
-                        src="/img/pizza.png" 
-                        layout="fill" 
-                        objectFit="cover" 
-                        alt=""
-                      />
-                    </div>
-                  </td>
-                  <td>
-                    <span className={styles.name}>
-                      CORALZO
-                    </span>
-                  </td>
-                  <td>
-                    <span className={styles.extras}>
-                      Douable ingredients , sauce tomates
-                    </span>
-                  </td>
-                  <td>
-                    <span className={styles.price}>400 fcfa</span>
-                  </td>
-                  <td>
-                    <span className={styles.total}>400 fcfa</span>
-                  </td>
-                </tr> */}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div className={styles.imgContainer}>
+                        <Image 
+                          src="/img/pizza.png" 
+                          layout="fill" 
+                          objectFit="cover" 
+                          alt=""
+                        />
+                      </div>
+                    </td>
+                    <td>
+                      <span className={styles.name}>
+                        CORALZO
+                      </span>
+                    </td>
+                    <td>
+                      <span className={styles.extras}>
+                        Douable ingredients , sauce tomates
+                      </span>
+                    </td>
+                    <td>
+                      <span className={styles.price}>400 fcfa</span>
+                    </td>
+                    <td>
+                      <span className={styles.total}>400 fcfa</span>
+                    </td>
+                  </tr>
+                </tbody>
             </table>
         </div>
-        {/* <div className={styles.right}>
+        <div className={styles.right}>
           <div className={styles.wrapper}>
             <h2 className={styles.title}> CART TOTAL</h2>
             <div className={styles.totalText}>
@@ -59,7 +61,7 @@ const Cart = () => {
             <button className={styles.button}>PAYER MAINTENANT</button>
           </div>
         </div>
-        <div className={styles.right}></div> */}
+        <div className={styles.right}></div>
     </div>
   )
 }
