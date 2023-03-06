@@ -9,6 +9,8 @@ const Navbar = () => {
 
   const quantity = useSelector (state => state.cart.quantity);
 
+  const rsi = useSelector (state => console.log(state.cart));
+
 
   return (
     <div className={styles.container}>
