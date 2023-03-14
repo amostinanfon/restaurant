@@ -1,8 +1,21 @@
 // // /** @type {import('next').NextConfig} */
-  const nextConfig = {
-  reactStrictMode: true,
- }
+//   const nextConfig = {
+//   reactStrictMode: true,
+//  }
 
-  module.exports = nextConfig
+//   module.exports = 
+
+
+
+module.exports = {
+  async rewrites() {
+      return [
+        {
+          source: '/api/:path*',
+          destination: 'https://api.example.com/:path*',
+        },
+      ]
+    },
+};
 
 

@@ -3,7 +3,7 @@ import styles from '../styles/OrderDetail.module.css';
 
 
 
-const  OrderDetail = ({detail, creaateOrder}) => {
+const  OrderDetail = ({total, createOrder}) => {
 
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
@@ -34,7 +34,7 @@ const  OrderDetail = ({detail, creaateOrder}) => {
           />
         </div>
         <div className={styles.item}>
-          <label className={styles.label}>Addresse</label>
+          <label className={styles.label}>Adresse</label>
           <textarea 
             rows={5}
             placeholder="Ndongbong"
