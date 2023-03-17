@@ -52,6 +52,14 @@ margin-bottom: 10px;
     cursor: pointer;
 }
 
+.button:hover {
+    background-color: aqua;
+}
+
+
+.button:active {
+    background-color: rgb(220, 177, 37);
+}
 
 
 
