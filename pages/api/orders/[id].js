@@ -1,5 +1,5 @@
 import dbConnect from '../../../util/mongo';
-import Orders from '../../../models/Orders';
+import Order from '../../../models/Order';
 
 
 export default async function  handler(req, res) {
