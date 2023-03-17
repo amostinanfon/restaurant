@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 export default function Home({pizzaList}) {
 
-  const cart = useSelector(state => console.log(state.cart));
+  const state = useSelector(state => console.log(state));
 
   return (
     <div className={styles.container}>

@@ -1,10 +1,13 @@
 import Image from "next/legacy/image";
 import styles from "../styles/PizzaCard.module.css";
 import Link from "next/link"
+import { useSelector } from "react-redux";
 
 const PizzaCard = ({pizza}) => {
 
-  
+  useSelector(state => console.log(state));
+
+
   return (
     <div className={styles.container}>
       <Link href={`/product/${pizza._id}`}>
