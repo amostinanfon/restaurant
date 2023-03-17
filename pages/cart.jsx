@@ -27,7 +27,7 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/orders",
+      const res = await axios.post("https://restaurant-lake-nine.vercel.app/api/orders",
                         { crossdomain: true }, data);
       if (res.status === 201) {
          dispatch(reset());

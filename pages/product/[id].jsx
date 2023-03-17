@@ -105,7 +105,7 @@ const handleClick = () => {
 
 export const getServerSideProps = async ({params}) => {
   // Fetch data from external API
-  const res = await axios.get(`http://localhost:3000/api/products/${params.id}`);
+  const res = await axios.get(`https://restaurant-lake-nine.vercel.app/api/products/${params.id}`);
 
   // Pass data to the page via props
   return { 
