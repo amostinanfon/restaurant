@@ -4,11 +4,21 @@ import { useState } from "react";
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
+  
   const images = [
-    "/img/psh5.png",
-    "/img/psh2.png",
-    "/img/psh3.png",
-  ];
+    {
+      source: "/img/psh5.png",
+      name: "psh5"
+    },
+    {
+      source: "/img/psh2.png",
+      name: "psh2"
+    },
+    {
+      source: "/img/psh3.png",
+      name: "psh3"
+    }
+  ]
 
   const handleArrow = (direction) =>{
       if(direction==="l"){
@@ -22,12 +32,12 @@ const Featured = () => {
   return (
     <div className={styles.container}>
       <div className={styles.arrowContainer} style={{ left: 0 }} onClick={()=>handleArrow("l")}>
-        <Image src="/img/arrowl.png" alt="" layout="fill" objectFit="contain"/>
+        <Image src="/img/arrowl.png" alt="arrow" layout="fill" objectFit="contain"/>
       </div>
       <div className={styles.wrapper} style={{transform:`translateX(${-100*index}vw)`}}>
-        {images.map((img, i) => (
-          <div className={styles.imgContainer} key={i}>
-            <Image src={img} alt="" layout="fill" objectFit="contain" />
+        {images?.map((img, index) => (
+          <div className={styles.imgContainer} key={index}>
+            <Image src={img.source} alt={img.name} layout="fill" objectFit="contain" />
           </div>
         ))}
       </div>
