@@ -4,7 +4,7 @@ import PizzaCard from './PizzaCard'
 
 const PizzaList = ({pizzaList}) => {
 
-  //console.log(pizzaList);
+
   
   return (
     <div className={styles.container}>
