@@ -183,7 +183,12 @@ const Cart = () => {
                 </PayPalScriptProvider>
               </div>
             ):(
-              <button onClick={() =>setOpen(true)} className={styles.button}>PAYER MAINTENANT</button>
+              <button 
+                onClick={() =>setOpen(true)} 
+                className={styles.button}
+                >
+                  PAYER MAINTENANT
+              </button>
             )}  
           </div>
         </div>
