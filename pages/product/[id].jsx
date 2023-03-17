@@ -2,7 +2,7 @@ import styles from "../../styles/Product.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import axios from 'axios';
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector } from "react-redux";
 import { addProduct } from '../../redux/cartSlice';
 
 
@@ -41,7 +41,6 @@ const Product = ({pizza}) => {
 const handleClick = () => {
   dispatch(addProduct({...pizza,extras, price, quantity}));
 }
-
 
   return (
     <div className={styles.container}>

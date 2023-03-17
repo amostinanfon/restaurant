@@ -4,10 +4,13 @@ import styles from '../styles/Home.module.css';
 import Featured from '../components/Featured';
 import axios from 'axios';
 import PizzaList from '../components/PizzaList';
+import { useSelector } from 'react-redux';
 
 
 
 export default function Home({pizzaList}) {
+
+  const cart = useSelector(state => console.log(state.cart));
 
   return (
     <div className={styles.container}>
