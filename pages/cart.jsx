@@ -27,14 +27,11 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("https://restaurant-lake-nine.vercel.app/api/orders",
-                        { crossdomain: true }, data);
+      const res = await axios.post("https://restaurant-lake-nine.vercel.app/api/orders", data);
       if (res.status === 201) {
          dispatch(reset());
          router.push(`/orders/${res.data._id}`);
       } 
-
-      console.log(1)
     } catch (err) {
       console.log(err);
     }

@@ -9,8 +9,9 @@ const  OrderDetail = ({total, createOrder}) => {
   const [address, setAddress] = useState("");
 
   const handleClick = () => {
-    createOrder({customer, address, total, method: 0})
-  }
+    // createOrder({ customer, address, total, method: 0})
+    console.log(1)
+ }
 
   return (
     <div className={styles.container}>
@@ -43,12 +44,6 @@ const  OrderDetail = ({total, createOrder}) => {
             onChange={(e) => setAddress(e.target.value)}
           />
         </div>
-        <button 
-              className={styles.button} 
-              onClick={handleClick}
-            >
-              Order
-            </button>
       </div>
     </div>
   )
