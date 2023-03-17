@@ -15,7 +15,7 @@ const Product = ({pizza}) => {
   const dispatch = useDispatch();
 
 
-  const cart = useSelector(state => console.log(state))
+  const cart = useSelector(state => console.log(state.products));
 
   const changePrice = (number) =>{
     setPrice(price + number);
