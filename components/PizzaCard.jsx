@@ -5,8 +5,6 @@ import { useSelector } from "react-redux";
 
 const PizzaCard = ({pizza}) => {
 
-  useSelector(state => console.log(state.products));
-
 
   return (
     <div className={styles.container}>

@@ -22,7 +22,8 @@ const Cart = () => {
     const amount = cart.total;
     const style = {"layout":"vertical"};
 
-    console.log(cart.products);
+    console.log(open)
+
 
     const dispatch = useDispatch();
     const router = useRouter();
