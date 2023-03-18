@@ -22,7 +22,7 @@ const Cart = () => {
     const amount = cart.total;
     const style = {"layout":"vertical"};
 
-    console.log(cart.state)
+    console.log(cart)
 
     const dispatch = useDispatch();
     const router = useRouter();
@@ -31,7 +31,7 @@ const Cart = () => {
     try {
       const res = await axios.post("https://restaurant-lake-nine.vercel.app/api/orders", data);
       if (res.status === 201) {
-          //dispatch(reset);
+          dispatch(reset(cart));
          router.push(`/orders/${res.data._id}`);
       }
     } catch (err) {
