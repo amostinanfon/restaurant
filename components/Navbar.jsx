@@ -23,10 +23,9 @@ const Navbar = () => {
       </div>
       <div className={styles.item} data-testid='two'>
         <ul className={styles.list}>
-          <Link href='/'  passHre>
-            <li className={styles.listItem}>Homepage</li>
+          <Link href='/' passHref>
+            <li className={styles.listItem}>Accueil</li>
           </Link>
-          <li className={styles.listItem}>Accueil</li>
           <li className={styles.listItem}>Produits</li>
           <li className={styles.listItem}>Menu</li>
           {/* <Image src="/img/logo.png" alt="logo" width={160} height={69} /> */}
