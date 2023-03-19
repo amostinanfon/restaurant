@@ -20,18 +20,35 @@ const Index = ({orders, products}) => {
         }
     }
 
+   const handleStatus = async (id) => {
+
+const item = orderList.filter((order) => order._id === id)[0];
+const currentStatus = item.status;
+
+        try {
+            const res = await axios.put("https://restaurant-lake-nine.vercel.app/api/orders/"+ id , 
+                                   { status: currentStatus +1});
+            
+            setOrderList([
+                res.data,
+                ...orderList.filter((order) =>order._id !== id )
+            ]);
+        } catch (error) {
+            console.log(error);    
+        }
+   }
 
   return (
     <div className={styles.container}>
         <div className={styles.item}>
-            <h1 className={styles.title}>Products</h1>
+            <h1 className={styles.title}>Produits</h1>
             <table className={styles.table}>
                 <tbody>
                     <tr className={styles.trTitle}>
                         <th>Image</th>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Price</th>
+                        <th>Titre</th>
+                        <th>Prix</th>
                         <th>Action</th>
                     </tr>
                 </tbody>
@@ -51,7 +68,7 @@ const Index = ({orders, products}) => {
                         <td>{product.title}</td>
                         <td>{product.prices[0]}</td>
                         <td>
-                            <button className={styles.button}>Edit</button>
+                            <button className={styles.button}>Editer</button>
                             <button 
                                 className={styles.button}
                                 onClick={()=>handleDelete(product._id)}
@@ -65,15 +82,15 @@ const Index = ({orders, products}) => {
             </table>
         </div>
         <div className={styles.item}>
-        <h1 className={styles.title}>Orders</h1>
+        <h1 className={styles.title}>Commande</h1>
         <table className={styles.table}>
                 <tbody>
                     <tr className={styles.trTitle}>
                         <th>ID</th>
-                        <th>Customer</th>
+                        <th>Client</th>
                         <th>Total</th>
-                        <th>Payment</th>
-                        <th>Status</th>
+                        <th>Payement</th>
+                        <th>Statut</th>
                         <th>Action</th>
                     </tr>
                 </tbody>
