@@ -34,7 +34,7 @@ const index = ({orders, products}) => {
                         <th>Action</th>
                     </tr>
                 </tbody>
-                {products.map((product) => (
+                {pizzaList.map((product) => (
                     <tbody>
                     <tr className={styles.trTitle}>
                         <td>
