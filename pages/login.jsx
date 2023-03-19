@@ -32,7 +32,6 @@ const handleClick = async () => {
             <h1>Admin DashBoard</h1>
             <input 
                 placeholder="username"
-                type="text"
                 className={styles.input}
                 onChange={(e) =>setUsername(e.target.value)}
             />
