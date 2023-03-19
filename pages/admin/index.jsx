@@ -4,11 +4,12 @@ import axios from "axios";
 import { useState } from 'react';
 
 
-const index = ({orders, products}) => {
+const Index = ({orders, products}) => {
 
 
     const [pizzaList , setPizzaList ] = useState(products);
     const [orderList , setOrderList] = useState(orders);
+    const status = ["preparing", "on the way", "delivered"]
 
     const handleDelete = async (id) => {
         try {
@@ -46,7 +47,7 @@ const index = ({orders, products}) => {
                                 alt='pizza' 
                             />
                         </td>
-                        <td>{product._id.slice(0,5)}...</td>
+                        <td>{product._id}</td>
                         <td>{product.title}</td>
                         <td>{product.prices[0]}</td>
                         <td>
@@ -80,7 +81,7 @@ const index = ({orders, products}) => {
                     <tbody key={index}>
                     <tr className={styles.trTitle}>
                         <td>
-                           {order._id.slice(0,5)}...
+                           {order._id}
                         </td>
                         <td>{order.customer}</td>
                         <td>{order.total}</td>
@@ -88,10 +89,11 @@ const index = ({orders, products}) => {
                         <td>
                             {order.method === 0 ? <span>cash</span>:<span>paid</span>}
                         </td>
-                        {/* <td>{status[order.status]}</td> */}
+                        <td>{status[order.status]}</td>
                         <td>
                             <button
                                 onClick={() =>handleStatus(order._id)}
+                                className={styles.nextstage}
                             >
                                 Next Stage
                             </button>
@@ -119,4 +121,4 @@ export const getServerSideProps = async () => {
 }
 
 
-export default index;
+export default Index;
