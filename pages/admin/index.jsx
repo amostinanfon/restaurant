@@ -53,7 +53,7 @@ const index = ({orders, products}) => {
                             <button className={styles.button}>Edit</button>
                             <button 
                                 className={styles.button}
-                                onClick={() => handleDelete(product._id)}
+                                onClick={()=>handleDelete(product._id)}
                             >
                                 Delete
                             </button>
@@ -97,6 +97,7 @@ const index = ({orders, products}) => {
                             </button>
                         </td>
                     </tr>
+
                 </tbody>
                 ))}
             </table>  
