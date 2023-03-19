@@ -20,13 +20,6 @@
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: turquoise;
-}
-
-.button:active {
-    background-color: rgb(178, 105, 10);
-}
 
 .button:first-child {
     background-color: teal;
@@ -35,5 +28,13 @@
 
 .button:last-child {
     background-color: crimson;
+}
+
+.button:hover {
+    background-color: turquoise;
+}
+
+.button:active {
+    background-color: rgb(178, 105, 10);
 }
 
