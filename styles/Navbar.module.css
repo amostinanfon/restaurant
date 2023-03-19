@@ -1,6 +1,5 @@
 .container {
   height: 100px;
-  width: 100%;
   padding: 0px 50px;
   background-color: #d1411e;
   display: flex;
@@ -83,6 +82,13 @@
 }
 
 @media screen and (max-width:900px) {
+
+
+  .container {
+    width: 120%;
+  }
+
+
   .item:nth-child(2) {
     display: none;
   }
