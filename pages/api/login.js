@@ -6,7 +6,7 @@ const handler = (req, res) => {
             const { username, password} = req.body;
 
             if(
-                username === process.emv.ADMIN_USERNAME && 
+                username === process.env.ADMIN_USERNAME && 
                 password === process.env.ADMIN_PASSWORD
             )   {
                 res.setHeader(
@@ -15,7 +15,7 @@ const handler = (req, res) => {
                         maxAge: 60 * 60,
                         sameSite: "strict",
                         path: "/",
-                        httpOnly: true
+                        // httpOnly: true
                     }
                 )
             );
