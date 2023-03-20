@@ -26,6 +26,11 @@ const handleClick = async () => {
     }
 }
 
+
+// console.log("my username is :" , username);
+// console.log("my password is :" , password);
+
+
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>
@@ -39,7 +44,7 @@ const handleClick = async () => {
                 placeholder="password"
                 type="password"
                 className={styles.input}
-                onChange={(e) =>setUsername(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
             />
             <button 
                 onClick={handleClick} 
