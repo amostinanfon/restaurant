@@ -27,10 +27,6 @@ const handleClick = async () => {
 }
 
 
-// console.log("my username is :" , username);
-// console.log("my password is :" , password);
-
-
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>
