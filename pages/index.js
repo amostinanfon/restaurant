@@ -32,7 +32,7 @@ export default function Home({pizzaList, admin}) {
 }
 
 
-export const getServerSideProps = async (ctx) => {
+export const getServerSideProps = async () => {
 
 //   const myCookies = ctx.req?.cookies || "";
 //   let admin = false;
@@ -49,7 +49,7 @@ export const getServerSideProps = async (ctx) => {
     props: 
       { 
         pizzaList: res.data,
-        admin
+        //admin
       } 
   }
 
