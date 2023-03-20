@@ -4,8 +4,8 @@ import axios from "axios";
 import { useRouter } from "next/router";
 
 
-// const Add = ({setClose}) => {
-    const Add = () => {
+const Add = ({setClose}) => {
+    // const Add = () => {
 
 
     const [file , setFile] = useState(null);
@@ -51,7 +51,7 @@ import { useRouter } from "next/router";
                 <div className={styles.item}>
                     <label className={styles.label}>Extra</label>
                 </div> 
-            </div> */}      
+            </div>  */}     
         </div>
     )
 }
