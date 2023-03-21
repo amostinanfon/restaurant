@@ -42,7 +42,7 @@ export const getServerSideProps = async (ctx) => {
  }
 
     // Fetch data from external API
-  const res = await axios.get("https://restaurant-lake-nine.vercel.app/api/products/");  
+  const res = await axios.get("https://restaurant-amostinanfon.vercel.app/api/products/");  
 
   // Pass data to the page via props
   return { 

@@ -15,12 +15,12 @@ const router = useRouter();
 
 const handleClick = async () => {
     try {
-        await axios.post("https://restaurant-lake-nine.vercel.app/api/login",
+        await axios.post("https://restaurant-amostinanfon.vercel.app/api/login",
             {
                 username,
                 password
             });
-            router.push("https://restaurant-lake-nine.vercel.app/admin")
+            router.push("https://restaurant-amostinanfon.vercel.app/admin")
     } catch (err) {
         setError(true);
     }

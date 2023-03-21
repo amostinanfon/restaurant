@@ -139,8 +139,8 @@ export const getServerSideProps = async (ctx) => {
      }
    }
 
-    const productsRes = await axios.get("https://restaurant-lake-nine.vercel.app/api/products");
-    const ordersRes = await axios.get("https://restaurant-lake-nine.vercel.app/api/orders");
+    const productsRes = await axios.get("https://restaurant-amostinanfon.vercel.app/api/products");
+    const ordersRes = await axios.get("https://restaurant-amostinanfon.vercel.app/api/orders");
 
     return {
         props:{
