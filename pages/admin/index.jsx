@@ -26,7 +26,7 @@ const item = orderList.filter((order) => order._id === id)[0];
 const currentStatus = item.status;
 
         try {
-            const res = await axios.put("https://restaurant-lake-nine.vercel.app/api/orders/"+ id , 
+            const res = await axios.put("https://restaurant-amostinanfon.vercel.app/api/orders/"+ id , 
                                    { status: currentStatus +1});
             
             setOrderList([
