@@ -32,14 +32,14 @@ export default function Home({pizzaList, admin}) {
 }
 
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (ctx) => {
 
-//   const myCookies = ctx.req?.cookies || "";
-//   let admin = false;
+  const myCookie = ctx.req?.cookies || "";
+  let admin = false;
  
-//  if (myCookies.token === process.env.TOKEN) {
-//   admin = true;
-//  }
+ if (myCookie.token === process.env.TOKEN) {
+  admin = true;
+ }
 
     // Fetch data from external API
   const res = await axios.get("https://restaurant-lake-nine.vercel.app/api/products/");  
@@ -49,7 +49,7 @@ export const getServerSideProps = async () => {
     props: 
       { 
         pizzaList: res.data,
-        //admin
+        admin
       } 
   }
 

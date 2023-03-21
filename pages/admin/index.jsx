@@ -127,16 +127,16 @@ const currentStatus = item.status;
 
 export const getServerSideProps = async (ctx) => {
 
-    const myCookies = ctx.req?.cookies || "";
+    const myCookie = ctx.req?.cookies || "";
     let admin = false;
    
-   if (myCookies.token === process.env.TOKEN) {
+   if (myCookie.token === process.env.TOKEN) {
     return {
         redirect: {
             destination: "/admin/login",
             permanent: false
         }
-    }
+     }
    }
 
     const productsRes = await axios.get("https://restaurant-lake-nine.vercel.app/api/products");
