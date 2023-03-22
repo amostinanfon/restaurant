@@ -26,7 +26,7 @@ const Add = ({setClose}) => {
                     X
                 </span>
             </div>
-            {/* <div className={styles.item}>
+             <div className={styles.item}>
                   <label className={styles.label}>Desc</label>
                   <textarea 
                     rows={4}
@@ -51,7 +51,7 @@ const Add = ({setClose}) => {
                 <div className={styles.item}>
                     <label className={styles.label}>Extra</label>
                 </div> 
-            </div>  */}     
+            </div>     
         </div>
     )
 }
