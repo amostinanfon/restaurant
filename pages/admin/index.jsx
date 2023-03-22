@@ -133,7 +133,7 @@ export const getServerSideProps = async (ctx) => {
    if (myCookie.token === process.env.TOKEN) {
     return {
         redirect: {
-            destination: "/admin/login",
+            destination: "/admin",
             permanent: false
         }
      }

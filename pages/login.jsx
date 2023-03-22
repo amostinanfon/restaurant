@@ -20,7 +20,7 @@ const handleClick = async () => {
                 username,
                 password
             });
-            router.push("https://restaurant-amostinanfon.vercel.app/admin")
+            router.push("/admin")
     } catch (err) {
         setError(true);
     }
@@ -46,7 +46,7 @@ const handleClick = async () => {
                 onClick={handleClick} 
                 className={styles.button}
             >
-                Sign In
+                Se connecter
             </button>
             {error && <span className={styles.error}>Wrong Credentials</span>}
         </div>
