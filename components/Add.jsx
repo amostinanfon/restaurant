@@ -5,8 +5,6 @@ import { useRouter } from "next/router";
 
 
 const Add = ({setClose}) => {
-    // const Add = () => {
-
 
     const [file , setFile] = useState(null);
     const [title, setTitle] = useState(null);
@@ -16,6 +14,37 @@ const Add = ({setClose}) => {
     const [extraOptions, setExtraOptions] = useState([]);
 
 
+
+    const changePrice = (e,index) => {
+        const currentPrices = prices;
+        currentPrices[index] = e.target.value;
+        setPrices(currentPrices);
+    }
+
+    const handleExtraInput = (e) => {
+        setExtra({...extra, [e.target.name]:e.target.value});
+    }
+
+    const handleExtra = (e) => {
+        setExtraOptions((prev) => [...prev, extra]);
+    }
+
+    const handleCreate = async () => {
+        const data = new FormData();
+        data.append("file", file);
+        data.append("upload_preset", "uploads");
+        try {
+            const uploadRes = await axios.post(
+                "https://api.cloudinary.com/v1_1/de4faw8fu/image/upload",
+                data
+            );
+            console.log(uploadRes.data);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -23,8 +52,25 @@ const Add = ({setClose}) => {
                     className={styles.close}
                     onClick={() =>setClose(true)}
                 >
-                    X
+                    XXXXXXXX
                 </span>
+                <h1>Ajouter une nouvelle Pizza</h1>
+                <div className={styles.item}>
+                    <label className={styles.label}>choisir une image</label>
+                    <input 
+                        type="file"
+                        className={styles.item}
+                        onChange={(e) =>setFile(e.target.files[0])}
+                    />
+                </div>
+                <div className={styles.item}>
+                    <label className={styles.label}>choisir une image</label>
+                    <input 
+                        type="text"
+                        className={styles.item}
+                        onChange={(e) =>setTitle(e.target.value)}
+                    />
+                </div>
             </div>
              <div className={styles.item}>
                   <label className={styles.label}>Desc</label>
