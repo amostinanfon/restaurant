@@ -20,7 +20,7 @@ const handleClick = async () => {
                 username,
                 password
             });
-            router.push("/admin")
+            router.push("https://restaurant-amostinanfon.vercel.app/admin");
     } catch (err) {
         setError(true);
     }
