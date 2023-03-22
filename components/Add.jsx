@@ -52,7 +52,7 @@ const Add = ({setClose}) => {
                     className={styles.close}
                     onClick={() =>setClose(true)}
                 >
-                    XXXXXXXX
+                    X
                 </span>
                 <h1>Ajouter une nouvelle Pizza</h1>
                 <div className={styles.item}>
@@ -70,32 +70,32 @@ const Add = ({setClose}) => {
                         onChange={(e) =>setTitle(e.target.value)}
                     />
                 </div>
-            </div>
-             <div className={styles.item}>
-                  <label className={styles.label}>Desc</label>
-                  <textarea 
-                    rows={4}
-                    type="text"
-                    onChange={(e) => setDesc(e.target.value)}
-                  />
-            </div>
-            <div className={styles.item}>
-                <label className={styles.label}>Prices</label>
-                <input
-                    className={`${styles.input} ${styles.inputSm}` } 
-                    type="number"
-                    placeholder='Medium'
-                    onChange={(e) =>changePrice(e,1)}
-                />
-                <input
-                    className={`${styles.input} ${styles.inputSm}` } 
-                    type="number"
-                    placeholder='Larger'
-                    onChange={(e) =>changePrice(e,2)}
-                /> 
                 <div className={styles.item}>
-                    <label className={styles.label}>Extra</label>
-                </div> 
+                    <label className={styles.label}>Desc</label>
+                    <textarea 
+                        rows={4}
+                        type="text"
+                        onChange={(e) => setDesc(e.target.value)}
+                    />
+                </div>
+                <div className={styles.item}>
+                    <label className={styles.label}>Prices</label>
+                    <input
+                        className={`${styles.input} ${styles.inputSm}` } 
+                        type="number"
+                        placeholder='Medium'
+                        onChange={(e) =>changePrice(e,1)}
+                    />
+                    <input
+                        className={`${styles.input} ${styles.inputSm}` } 
+                        type="number"
+                        placeholder='Larger'
+                        onChange={(e) =>changePrice(e,2)}
+                    /> 
+                    <div className={styles.item}>
+                        <label className={styles.label}>Extra</label>
+                    </div> 
+                </div>
             </div>     
         </div>
     )
