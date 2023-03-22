@@ -128,12 +128,11 @@ const currentStatus = item.status;
 export const getServerSideProps = async (ctx) => {
 
     const myCookie = ctx.req?.cookies || "";
-    let admin = false;
    
-   if (myCookie.token === process.env.TOKEN) {
+   if (myCookie.token !== process.env.TOKEN) {
     return {
         redirect: {
-            destination: "https://restaurant-amostinanfon.vercel.app/admin",
+            destination: "https://restaurant-amostinanfon.vercel.app/login",
             permanent: false
         }
      }
