@@ -133,7 +133,7 @@ export const getServerSideProps = async (ctx) => {
    if (myCookie.token === process.env.TOKEN) {
     return {
         redirect: {
-            destination: "/admin",
+            destination: "https://restaurant-amostinanfon.vercel.app/admin",
             permanent: false
         }
      }
