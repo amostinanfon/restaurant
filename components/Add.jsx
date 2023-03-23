@@ -84,7 +84,7 @@ const Add = ({setClose}) => {
                         <input
                             className={`${styles.input} ${styles.inputSm}` } 
                             type="number"
-                            placeholder='Price'
+                            placeholder='price'
                             name='price'
                             onChange={(e) =>handleExtraInput}
                             />

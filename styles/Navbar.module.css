@@ -83,12 +83,6 @@
 
 @media screen and (max-width:900px) {
 
-
-  .container {
-    width: 120%;
-  }
-
-
   .item:nth-child(2) {
     display: none;
   }

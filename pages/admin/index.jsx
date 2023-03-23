@@ -98,7 +98,7 @@ const currentStatus = item.status;
                     <tbody key={index}>
                     <tr className={styles.trTitle}>
                         <td>
-                           {order._id}
+                           {order._id.slice(0,5)}. . .
                         </td>
                         <td>{order.customer}</td>
                         <td>{order.total}</td>
