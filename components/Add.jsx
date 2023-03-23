@@ -9,9 +9,9 @@ const Add = ({setClose}) => {
     const [file , setFile] = useState(null);
     const [title, setTitle] = useState(null);
     const [desc, setDesc] = useState(null);
-    const [prices, setPrices] = useState(null);
-    const [extra, setExtra] = useState(null);
+    const [prices, setPrices] = useState([]);
     const [extraOptions, setExtraOptions] = useState([]);
+    const [extra, setExtra] = useState([null]);
 
 
 
@@ -39,6 +39,17 @@ const Add = ({setClose}) => {
                 data
             );
             console.log(uploadRes.data);
+            const { url } = uploadRes.data;
+            const newProduct = {
+                title,
+                desc,
+                price,
+                extraOptions,
+                img: url
+            }
+
+            await axios.post("https://restaurant-amostinanfon.vercel.app/api/products", newProduct);
+            setClose(true);
         } catch (err) {
             console.log(err);
         }
@@ -84,7 +95,7 @@ const Add = ({setClose}) => {
                         <input
                             className={`${styles.input} ${styles.inputSm}` } 
                             type="number"
-                            placeholder='price'
+                            placeholder='Small'
                             name='price'
                             onChange={(e) =>handleExtraInput}
                             />
