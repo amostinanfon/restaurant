@@ -114,12 +114,30 @@ const Add = ({setClose}) => {
                             placeholder='Larger'
                             onChange={(e) =>{handleExtraInput}}
                             /> 
-                            <button 
-                                className={styles.extraButton}
-                                onClick={handleExtra}
-                            >
-                                Ajouter
-                            </button>
+                            
+                    </div>
+                    <div>
+                        <label className={styles.label}>Extra</label>
+                        <input
+                            className={`${styles.input} ${styles.inputSm}` } 
+                            type="text"
+                            placeholder='basquette'
+                            name='extra'
+                            onChange={(e) =>{handleExtraInput}}
+                        />
+                        <input
+                            className={`${styles.input} ${styles.inputSm}` } 
+                            type="number"
+                            name='price'
+                            placeholder='Larger'
+                            onChange={(e) =>{handleExtraInput}}
+                        /> 
+                        <button 
+                            className={styles.extraButton}
+                            onClick={handleExtra}
+                        >
+                            Ajouter
+                        </button>
                     </div>
                     <div className={styles.extraItems}>
                         {extraOptions?.map((option) =>(
