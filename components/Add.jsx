@@ -123,7 +123,7 @@ const Add = ({setClose}) => {
                     <div className={styles.extraItems}>
                         {extraOptions.map((option) =>(
                             <span 
-                                className={extraItem}
+                                className={styles.extraItem}
                                 key={option.text}
                             >
                                 {option.text}
