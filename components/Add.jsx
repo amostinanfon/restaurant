@@ -116,6 +116,8 @@ const Add = ({setClose}) => {
                             /> 
                             
                     </div>
+                </div>
+                <div className={styles.item}>
                     <div>
                         <label className={styles.label}>Extra</label>
                         <input
