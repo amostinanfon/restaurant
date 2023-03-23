@@ -11,7 +11,7 @@ const Add = ({setClose}) => {
     const [desc, setDesc] = useState(null);
     const [prices, setPrices] = useState([]);
     const [extraOptions, setExtraOptions] = useState([]);
-    const [extra, setExtra] = useState(null);
+    const [extra, setExtra] = useState({});
 
 
 
@@ -28,6 +28,7 @@ const Add = ({setClose}) => {
     const handleExtra = (e) => {
         setExtraOptions((prev) => [...prev, extra]);
     }
+
 
     const handleCreate = async () => {
         const data = new FormData();
