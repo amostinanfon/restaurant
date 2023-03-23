@@ -49,8 +49,8 @@ const Add = ({setClose}) => {
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <span 
-                    className={styles.close}
                     onClick={() =>setClose(true)}
+                    className={styles.close}
                 >
                     X
                 </span>
@@ -80,22 +80,52 @@ const Add = ({setClose}) => {
                 </div>
                 <div className={styles.item}>
                     <label className={styles.label}>Prices</label>
-                    <input
-                        className={`${styles.input} ${styles.inputSm}` } 
-                        type="number"
-                        placeholder='Medium'
-                        onChange={(e) =>changePrice(e,1)}
-                    />
-                    <input
-                        className={`${styles.input} ${styles.inputSm}` } 
-                        type="number"
-                        placeholder='Larger'
-                        onChange={(e) =>changePrice(e,2)}
-                    /> 
-                    <div className={styles.item}>
-                        <label className={styles.label}>Extra</label>
-                    </div> 
+                    <div className={styles.priceContainer}>
+                        <input
+                            className={`${styles.input} ${styles.inputSm}` } 
+                            type="number"
+                            placeholder='Price'
+                            name='price'
+                            onChange={(e) =>handleExtraInput}
+                            />
+                        <input
+                            className={`${styles.input} ${styles.inputSm}` } 
+                            type="number"
+                            placeholder='Medium'
+                            name='price'
+                            onChange={(e) =>changePrice(e,1)}
+                            />
+                        <input
+                            className={`${styles.input} ${styles.inputSm}` } 
+                            type="number"
+                            name='price'
+                            placeholder='Larger'
+                            onChange={(e) =>changePrice(e,2)}
+                            /> 
+                            <button 
+                                className={styles.extraButton}
+                                onClick={handleExtra}
+                            >
+                                Ajouter
+                            </button>
+                    </div>
+                    <div className={styles.extraItems}>
+                        {extraOptions.map((option) =>(
+                            <span 
+                                className={extraItem}
+                                key={option.text}
+                            >
+                                {option.text}
+                            </span>
+                        ))}
+                    </div>
                 </div>
+                <button 
+                    className={styles.addButton}
+                    onClick={handleCreate}
+                >
+                    Create
+                </button>
             </div>     
         </div>
     )

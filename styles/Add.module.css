@@ -42,10 +42,10 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.tem {
+.item {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -63,7 +63,7 @@
     outline: none;
 }
 
-.priceontainer {
+.priceContainer {
     display: flex;
     justify-content: space-between;
 }
