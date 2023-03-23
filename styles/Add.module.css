@@ -37,7 +37,7 @@
 
 .wrapper {
     width: 500px;
-    height: calc(100vh - 350px);
+    height: calc(100vh - 200px);
     background-color: #fff;
     margin-top: 20px;
     padding: 10px 50px;

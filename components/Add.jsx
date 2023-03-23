@@ -104,14 +104,14 @@ const Add = ({setClose}) => {
                             type="number"
                             placeholder='Medium'
                             name='price'
-                            onChange={(e) =>changePrice(e,1)}
+                            onChange={(e) =>handleExtraInput}
                             />
                         <input
                             className={`${styles.input} ${styles.inputSm}` } 
                             type="number"
                             name='price'
                             placeholder='Larger'
-                            onChange={(e) =>changePrice(e,2)}
+                            onChange={(e) =>handleExtraInput}
                             /> 
                             <button 
                                 className={styles.extraButton}
