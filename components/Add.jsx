@@ -11,7 +11,7 @@ const Add = ({setClose}) => {
     const [desc, setDesc] = useState(null);
     const [prices, setPrices] = useState([]);
     const [extraOptions, setExtraOptions] = useState([]);
-    const [extra, setExtra] = useState([null]);
+    const [extra, setExtra] = useState(null);
 
 
 
@@ -43,7 +43,7 @@ const Add = ({setClose}) => {
             const newProduct = {
                 title,
                 desc,
-                price,
+                prices,
                 extraOptions,
                 img: url
             }
