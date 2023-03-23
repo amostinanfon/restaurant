@@ -3,23 +3,34 @@ import styles from '../styles/OrderDetail.module.css';
 
 
 
-const  OrderDetail = ({total, createOrder}) => {
+const  OrderDetail = ({total, createOrder, setClose}) => {
 
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
+  const [close, setClose] = useState(setClose);
 
   const handleClick = () => {
     createOrder({ customer, address, total, method: 0})
  }
 
+ const handleClose = () => {
+  setClose(false);
+ }
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
+        <span 
+          className={styles.close} 
+          onClick={handleClose}
+        >
+            X
+        </span>
         <h1>You will pay after delivery</h1>
         <div className={styles.item}>
           <label>Nama Surname</label>
           <input 
-            placeholder='John Doe' 
+            placeholder='John Doe'
             type="text" 
             className={styles.input}
             onChange={(e) =>setCustomer(e.target.value)}
@@ -47,7 +58,7 @@ const  OrderDetail = ({total, createOrder}) => {
               className={styles.button} 
               onClick={handleClick}
             >
-              Order
+              Payer
         </button>
       </div>
     </div>

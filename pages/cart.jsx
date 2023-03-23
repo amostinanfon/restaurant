@@ -18,6 +18,7 @@ const Cart = () => {
     const cart = useSelector(state => state.cart);
     const [open, setOpen] = useState(false);
     const [cash, setCash] = useState(false);
+    const [close, setClose] = useState(false);
     const currency = "USD";
     const amount = cart.total;
     const style = {"layout":"vertical"};
@@ -169,7 +170,7 @@ const Cart = () => {
               <div className={styles.paymentMethods}>
                 <button 
                   className={styles.payButton}
-                  onClick={() =>setCash(true)}
+                  onClick={() =>setCash(true) && setClose(true)}
                   >PAIEMENT EN CASH</button>
                 <PayPalScriptProvider
                   options={{
@@ -195,8 +196,8 @@ const Cart = () => {
             )}  
           </div>
         </div>
-        {cash && (
-          <OrderDetail total={cart.total} createOrder={createOrder}/>
+        {cash && close && (
+          <OrderDetail total={cart.total} createOrder={createOrder} setclose={close}/>
         )}
     </div>
   )
