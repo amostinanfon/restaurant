@@ -3,11 +3,11 @@ import styles from '../styles/OrderDetail.module.css';
 
 
 
-const  OrderDetail = ({total, createOrder, setClose}) => {
+const  OrderDetail = ({total, createOrder, closed}) => {
 
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
-  const [close, setClose] = useState(setClose);
+  const [close, setClose] = useState(closed);
 
   const handleClick = () => {
     createOrder({ customer, address, total, method: 0})
