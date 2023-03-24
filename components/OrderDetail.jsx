@@ -13,16 +13,16 @@ const  OrderDetail = ({total, createOrder, setCash}) => {
     createOrder({ customer, address, total, method: 0})
  }
 
- const handleClose = () => {
-  setCash(false);
- }
+//  const handleClose = () => {
+//   setCash(false);
+//  }
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <span 
           className={styles.close} 
-          onClick={handleClose}
+          onClick={() => setCash(false)}
         >
             X
         </span>
