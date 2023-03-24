@@ -197,7 +197,7 @@ const Cart = () => {
           </div>
         </div>
         { cash && (
-          <OrderDetail total={cart.total} createOrder={createOrder} closed={close}/>
+          <OrderDetail total={cart.total} createOrder={createOrder} closed={cash} />
         )}
     </div>
   )

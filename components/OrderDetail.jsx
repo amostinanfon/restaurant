@@ -26,7 +26,7 @@ const  OrderDetail = ({total, createOrder, closed}) => {
         >
             X
         </span>
-        <h1>You will pay after delivery</h1>
+        <h1>paiement à la livraison</h1>
         <div className={styles.item}>
           <label>Nama Surname</label>
           <input 
