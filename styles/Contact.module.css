@@ -3,13 +3,53 @@
 }
 
 
+.wrapper {
+    color: #fff;
+}
 
+.wrapperItem {
+    color: #fff;
+}
 
+.card {
+    color: #fff;
+}
 
+.cardItem {
+    color: #fff;
+}
 
 .button {
     justify-content: center;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
+}
+
+.main {
+    color: #fff;
+}
+
+.input {
+    color: #fff;
+}
+
+.label {
+    color: #fff;
+}
+
+.cardRight {
+    color: #fff;
+}
+
+.img {
+    color: #fff;
+}
+
+.item {
+    color: #fff;
+}
+
+.text {
+    color:#fff;
 }
