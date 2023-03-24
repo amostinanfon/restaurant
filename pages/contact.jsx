@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from  '../styles/Contact.module.css';
-import { useState } from 'react';
+
 
 
 const Contact = () => {
@@ -19,7 +20,7 @@ const Contact = () => {
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <div className={item}>
-                    <Image src="/img/bg.png" objectFit="cover" layout="fill" alt="" />
+                    <Image src="/icon/tele.png" objectFit="cover" layout="fill" alt="" />
                 </div>
                     <div className={styles.item}>
                         <div className={styles.text}>
