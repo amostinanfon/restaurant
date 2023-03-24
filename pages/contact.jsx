@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from  '../styles/Contact.module.css';
-
+import { useState } from 'react';
 
 
 const Contact = () => {
@@ -15,7 +15,7 @@ const Contact = () => {
     }
 
 
-    return (
+    return (<>
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <div className={item}>
@@ -95,6 +95,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
+    </>
     )
 }
 
