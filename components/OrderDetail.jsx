@@ -3,7 +3,7 @@ import styles from '../styles/OrderDetail.module.css';
 
 
 
-const  OrderDetail = ({total, createOrder, setClose}) => {
+const  OrderDetail = ({total, createOrder, setCash}) => {
 
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
@@ -14,7 +14,7 @@ const  OrderDetail = ({total, createOrder, setClose}) => {
  }
 
  const handleClose = () => {
-  setClose(false);
+  setCash(false);
  }
 
   return (
