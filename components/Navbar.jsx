@@ -26,8 +26,12 @@ const Navbar = () => {
           <Link href='/' passHref>
             <li className={styles.listItem}>Accueil</li>
           </Link>
-          <li className={styles.listItem}>Produits</li>
+          <Link href='/' passref>
+            <li className={styles.listItem}>Produits</li>
+          </Link>
+          <Link href='/login'>
           <li className={styles.listItem}>Menu</li>
+          </Link>
           {/* <Image src="/img/logo.png" alt="logo" width={160} height={69} /> */}
           TCHOP YA MO
           <li className={styles.listItem}>Evenements</li>

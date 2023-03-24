@@ -1,6 +1,6 @@
+import styles from  '../styles/Contact.module.css';
 import { useState } from 'react';
 import Image from 'next/image';
-import styles from  '../styles/Contact.module.css';
 
 
 
@@ -82,13 +82,13 @@ const Contact = () => {
                             </div>
                             <div className={styles.cardItem}>
                                 <div className={styles.img}>
-                                    <Image src="/icon/facebook.webp" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/facebook.webp" objectFit="cover" layout="fill" alt="" />
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/icon/instagram.webp" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/instagram.webp" objectFit="cover" layout="fill" alt="" />
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/icon/twitter.webp" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/twitter.webp" objectFit="cover" layout="fill" alt="" />
                                 </div>
                             </div> 
                         </div>
