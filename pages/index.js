@@ -13,7 +13,7 @@ import AddButton from '../components/AddButton';
 
 export default function Home({pizzaList, admin}) {
 
-  const [close, setClose] = useState(true)
+  const [close, setClose] = useState(true);
 
 
   return (

@@ -170,7 +170,7 @@ const Cart = () => {
               <div className={styles.paymentMethods}>
                 <button 
                   className={styles.payButton}
-                  onClick={() =>setCash(true) && setClose(true)}
+                  onClick={() =>setCash(true)}
                   >PAIEMENT EN CASH</button>
                 <PayPalScriptProvider
                   options={{
@@ -197,7 +197,7 @@ const Cart = () => {
           </div>
         </div>
         { cash && (
-          <OrderDetail total={cart.total} createOrder={createOrder} closed={cash} />
+          <OrderDetail total={cart.total} createOrder={createOrder} setClose={cash}/>
         )}
     </div>
   )
