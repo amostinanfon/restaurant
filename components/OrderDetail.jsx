@@ -7,7 +7,7 @@ const  OrderDetail = ({total, createOrder, closed}) => {
 
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
-  const [close, setClose] = useState(closed);
+  const [cash, setCash] = useState(closed);
 
   const handleClick = () => {
     createOrder({ customer, address, total, method: 0})
