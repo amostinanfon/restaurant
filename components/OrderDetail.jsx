@@ -56,7 +56,7 @@ const  OrderDetail = ({total, createOrder, setClose}) => {
         </div>
         <button 
               className={styles.button} 
-              onClick={handleClick}
+              onClick={console.log(1)}
             >
               Payer
         </button>
