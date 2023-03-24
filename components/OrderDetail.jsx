@@ -7,16 +7,13 @@ const  OrderDetail = ({total, createOrder, setCash}) => {
 
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
-  // const [cash, setCash] = useState(closed);
+
 
   const handleClick = () => {
     createOrder({ customer, address, total, method: 0})
  }
 
-//  const handleClose = () => {
-//   setCash(false);
-//  }
-
+ 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -28,7 +25,7 @@ const  OrderDetail = ({total, createOrder, setCash}) => {
         </span>
         <h1>paiement à la livraison</h1>
         <div className={styles.item}>
-          <label>Nama Surname</label>
+          <label >Surname</label>
           <input 
             placeholder='John Doe'
             type="text" 
@@ -56,7 +53,7 @@ const  OrderDetail = ({total, createOrder, setCash}) => {
         </div>
         <button 
               className={styles.button} 
-              onClick={console.log(1)}
+              onClick={handleClick}
             >
               Payer
         </button>

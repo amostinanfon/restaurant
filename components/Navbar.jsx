@@ -32,7 +32,9 @@ const Navbar = () => {
           TCHOP YA MO
           <li className={styles.listItem}>Evenements</li>
           <li className={styles.listItem}>Blog</li>
-          <li className={styles.listItem}>Contact</li>
+          <Link href='/contact' passHref>
+            <li className={styles.listItem}>Contact</li>
+          </Link>
         </ul>
       </div>
       <div className={styles.item} data-testid='three'>
