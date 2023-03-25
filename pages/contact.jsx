@@ -19,12 +19,14 @@ const Contact = () => {
     return (<>
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <div className={styles.itemImg}>
-                    <Image src="/img/contact.jpg" objectFit="cover" layout="fill" alt="" />
+                <div className={styles.item}>
+                    <div className={styles.itemImg}>
+                        <Image src="/img/contact.jpg" alt="" objectFit='cover' layout='fill'/>
+                    </div>
                 </div>
                     <div className={styles.item}>
                         <div className={styles.text}>
-                            <h1>Contact US</h1>
+                            Contact US
                         </div>
                         <div className={styles.main}>
                         <div className={styles.wrapperItem}>
@@ -59,36 +61,38 @@ const Contact = () => {
                             </div>
                             <div className={styles.card}>
                                 <div className={styles.cardRight}>
-                                    <h1>Contact</h1>
-                                    <p>amostinanfon17@gmail.com</p>
+                                    <h2>Contact</h2>
+                                    <span>amos17@gmail.com</span>
                                 </div>
                                 <div className={styles.cardRight}>
-                                    <h1>Localisation</h1>
-                                    <p>Douala Beedi</p>
-                                    <p>Cameroun</p>
+                                    <h2>Localisation</h2>
+                                    Douala Beedi<br/>
+                                    Cameroun<br/>
                                 </div>
                             </div>
                         </div>
                         <div className={styles.wrapperItem}>
                             <div
-                                className={styles.cardItem} 
+                                className={styles.cardItem2} 
                                 >
                                 <button
                                     className={styles.button}
                                     onChange={handleClick} 
                                     >
-                                    Contact Us
+                                    Envoyez
                                 </button>
                             </div>
-                            <div className={styles.cardItem}>
-                                <div className={styles.img}>
-                                    <Image src="/img/facebook.png" alt="" width={32} height={32}/>
-                                </div>
-                                <div className={styles.img}>
-                                    <Image src="/img/linkedin.png" alt="" width={32} height={32}/>
-                                </div>
-                                <div className={styles.img}>
-                                    <Image src="/img/twitter.png" alt="" width={32} height={32}/>
+                            <div className={styles.cardItem2}>
+                                <div className={styles.imgItem}>
+                                    <div className={styles.img}>
+                                        <Image src="/img/facebook.png" alt="" width={32} height={32}/>
+                                    </div>
+                                    <div className={styles.img}>
+                                        <Image src="/img/linkedin.png" alt="" width={32} height={32}/>
+                                    </div>
+                                    <div className={styles.img}>
+                                        <Image src="/img/twitter.png" alt="" width={32} height={32}/>
+                                    </div>
                                 </div>
                             </div> 
                         </div>

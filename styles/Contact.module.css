@@ -1,75 +1,130 @@
 .container {
    width: 100%;
-   height: calc(100vh - 100px);
+   height: 100%;
 }
 
 
 .wrapper {
     display: flex;
-    margin-top: 10px
 }
 
-.itemImg{
-    margin:0 0 10px 10px ;
-}
+/* .itemImg{
+    margin: 100px;
+} */
 
 .item {
     flex: 1;
+    margin: 30px 0 50px 50px;
     position: relative;
     display: flex;
   }
 
   .item:last-child {
     flex: 2;
-    padding: 50px;
+    padding: 0px 0 5px 10px;
+    margin-bottom: 0px;
     justify-content: center;
     flex-direction: column;
   }
 
 .wrapperItem {
     color: black;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
     color: rgb(27, 24, 24);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
+.card:last-child {
+    text-align: center;
+}
+
+.imgItem {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    margin: 10px;
+}
 .cardItem {
-    color: rgb(18, 16, 16);
+    margin: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardItem2 {
+    margin: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardItem2:first-child {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 .button {
-    justify-content: center;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+    width: 120px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 25px;
 }
 
 .main {
-    color: rgb(10, 8, 8);
+    border-top: 2px solid rgb(6, 6, 6);
+    border-left: 2px solid rgb(8, 8, 8);
 }
 
 .input {
     color: rgb(29, 24, 24);
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 .label {
-    color: rgb(16, 14, 14);
+    padding-bottom: 5px;
+    font-weight: 600;
+    font-size: larger;
 }
 
-.cardRight {
-    color: rgb(18, 14, 14);
-}
-
-.img {
-    width: 10px;
-    height: 10px;
+.cardRight:first-child {
+    margin-bottom: 30px;
 }
 
 .text {
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-weight: 600;
 }
 
-.text h1 {
-    font-size: medium;
+@media screen and (max-width: 700px){
+    .item:first-child {
+        display: none ;
+    }
+
+    .item:last-child {
+        padding: 0;
+        margin: 0;
+    }
+
+    .main {
+        border: none;
+        border-top: 2px solid black;
+    }
+
+    .text {
+        font-size: 40px;
+        text-align: center;
+        margin: 10px 0 20px 0;
+    }
 }
