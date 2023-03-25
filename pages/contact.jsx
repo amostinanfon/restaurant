@@ -82,13 +82,13 @@ const Contact = () => {
                             </div>
                             <div className={styles.cardItem}>
                                 <div className={styles.img}>
-                                    <Image src="/img/facebook.png" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/facebook.png" alt="" width={32} height={32}/>
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/img/instagram.png" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/instagram.png" alt="" width={32} height={32}/>
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/img/twitter.png" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/twitter.png" alt="" width={32} height={32}/>
                                 </div>
                             </div> 
                         </div>
