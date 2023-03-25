@@ -20,7 +20,7 @@ const Contact = () => {
         <div className={styles.container}>
             <div className={styles.wrapper}>
                 <div className={styles.item}>
-                    <Image src="/icon/tele.png" objectFit="cover" layout="fill" alt="" />
+                    <Image src="/icon/contact.jpg" objectFit="cover" layout="fill" alt="" />
                 </div>
                     <div className={styles.item}>
                         <div className={styles.text}>
@@ -82,13 +82,13 @@ const Contact = () => {
                             </div>
                             <div className={styles.cardItem}>
                                 <div className={styles.img}>
-                                    <Image src="/img/facebook.webp" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/facebook.png" objectFit="cover" layout="fill" alt="" />
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/img/instagram.webp" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/instagram.png" objectFit="cover" layout="fill" alt="" />
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/img/twitter.webp" objectFit="cover" layout="fill" alt="" />
+                                    <Image src="/img/twitter.png" objectFit="cover" layout="fill" alt="" />
                                 </div>
                             </div> 
                         </div>
