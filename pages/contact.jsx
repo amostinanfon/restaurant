@@ -85,7 +85,7 @@ const Contact = () => {
                                     <Image src="/img/facebook.png" alt="" width={32} height={32}/>
                                 </div>
                                 <div className={styles.img}>
-                                    <Image src="/img/instagram.png" alt="" width={32} height={32}/>
+                                    <Image src="/img/linkedin.png" alt="" width={32} height={32}/>
                                 </div>
                                 <div className={styles.img}>
                                     <Image src="/img/twitter.png" alt="" width={32} height={32}/>
