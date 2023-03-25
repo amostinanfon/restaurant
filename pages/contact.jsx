@@ -9,7 +9,7 @@ const Contact = () => {
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState('');
 
     const handleClick = () => {
         console.log(1)
@@ -19,7 +19,7 @@ const Contact = () => {
     return (<>
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <div className={item}>
+                <div className={styles.item}>
                     <Image src="/icon/tele.png" objectFit="cover" layout="fill" alt="" />
                 </div>
                     <div className={styles.item}>
