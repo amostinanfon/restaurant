@@ -6,8 +6,12 @@
 
 .wrapper {
     display: flex;
+    margin-top: 10px
 }
 
+.itemImg{
+    margin:0 0 10px 10px ;
+}
 
 .item {
     flex: 1;
@@ -64,4 +68,8 @@
 
 .text {
     margin-bottom: 10px;
+}
+
+.text h1 {
+    font-size: medium;
 }

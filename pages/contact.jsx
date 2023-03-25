@@ -19,7 +19,7 @@ const Contact = () => {
     return (<>
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <div className={styles.item}>
+                <div className={styles.itemImg}>
                     <Image src="/img/contact.jpg" objectFit="cover" layout="fill" alt="" />
                 </div>
                     <div className={styles.item}>
