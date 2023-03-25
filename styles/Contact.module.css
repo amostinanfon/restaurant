@@ -1,6 +1,6 @@
 .container {
    width: 100%;
-   height: calc(100vh - 100px);
+   height: 100px;
 }
 
 
@@ -63,5 +63,5 @@
 }
 
 .text {
-    font-size: 20px;
+    margin-bottom: 10px;
 }
