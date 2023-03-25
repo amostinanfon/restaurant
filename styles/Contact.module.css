@@ -1,6 +1,6 @@
 .container {
    width: 100%;
-   height: 100px;
+   height: calc(100vh - 100px);
 }
 
 
@@ -23,15 +23,15 @@
   }
 
 .wrapperItem {
-    
+    color: black;
 }
 
 .card {
-    color: #fff;
+    color: rgb(27, 24, 24);
 }
 
 .cardItem {
-    color: #fff;
+    color: rgb(18, 16, 16);
 }
 
 .button {
@@ -42,19 +42,19 @@
 }
 
 .main {
-    color: #fff;
+    color: rgb(10, 8, 8);
 }
 
 .input {
-    color: #fff;
+    color: rgb(29, 24, 24);
 }
 
 .label {
-    color: #fff;
+    color: rgb(16, 14, 14);
 }
 
 .cardRight {
-    color: #fff;
+    color: rgb(18, 14, 14);
 }
 
 .img {
