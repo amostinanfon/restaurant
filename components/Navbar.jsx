@@ -34,7 +34,9 @@ const Navbar = () => {
           </Link>
           {/* <Image src="/img/logo.png" alt="logo" width={160} height={69} /> */}
           TCHOP YA MO
-          <li className={styles.listItem}>Evenements</li>
+          <Link href='/event'>
+            <li className={styles.listItem}>Evenements</li>
+          </Link>
           <li className={styles.listItem}>Blog</li>
           <Link href='/contact'>
             <li className={styles.listItem}>Contact</li>
